@@ -1,0 +1,102 @@
+#!/bin/bash
+
+case $1 in
+	"branch")
+
+		from=$2;
+		name=$3;
+		commit=$4;
+
+		git checkout $from;git checkout -b $name;git push -u origin $name;
+
+	;;
+	"branches")
+		
+		git branch -a;
+		
+	;;
+	"unbranch")
+
+		git branch -D $2;git push origin :$2;
+
+	;;
+	"merge")
+
+		name=$2;
+		into=$3;
+
+		git checkout $into;git merge origin/$name;
+
+	;;
+	"discard")
+
+		# gitr discard js/app.js
+		# gitr discard
+
+		if [ "$2" ]
+			then
+				git checkout -- $2;
+			else
+				git checkout -- .;
+		fi
+
+	;;
+	"revert")
+
+		# gitr revert js/app.js kdh3ekjh2...
+		# gitr revert kdh3ekjh2...
+
+		if [ "$3" ]
+			then
+				git checkout $3 -- $2;
+			else
+				git checkout $2 -- .;
+		fi
+
+	;;
+	"commit")
+
+		git add -A .;git commit -m "$2";
+
+	;;
+	"commits")
+		
+		git log;
+
+	;;
+	"update")
+		
+		git remote update --prune origin;
+
+	;;
+	"status")
+		
+		git status;
+
+	;;
+	"push")
+		
+		git push;
+
+	;;
+	"pull")
+		
+		git pull;
+
+	;;
+	"checkout")
+
+		git checkout $2;
+
+	;;
+	"user")
+
+		git config --global user.name "$2";git config --global user.email "$3";
+
+	;;
+	"help")
+		
+		echo "help is on its way!";
+
+	;;
+esac

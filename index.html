@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>gitr</title>
+		<link rel="stylesheet" href="/css/gitr.css">
+	</head>
+	<body>
+		<h1>git. simplified.</h1>
+		<section>
+			<p>install on macOS</p>
+			<code>curl -O http://gitr.jamesrock.me/bin/gitr;chmod 755 gitr;sudo mv gitr /usr/local/bin</code>
+		</section>
+		<section>
+			<p>create new example branch from master</p>
+			<code>gitr branch master example</code>
+		</section>
+		<section>
+			<p>merge example branch into master</p>
+			<code>gitr merge example master</code>
+		</section>
+		<section>
+			<p>delete example branch</p>
+			<code>gitr unbranch example</code>
+		</section>
+		<section>
+			<p>checkout example branch</p>
+			<code>gitr checkout example</code>
+		</section>
+		<section>
+			<p>commit changes to current branch</p>
+			<code>gitr commit "some work"</code>
+		</section>
+		<section>
+			<p>discard changes to specific file since last commit</p>
+			<code>gitr discard js/app.js</code>
+		</section>
+		<section>
+			<p>discard changes to entire branch since last commit</p>
+			<code>gitr discard</code>
+		</section>
+		<section>
+			<p>revert specific file to commit-specific version</p>
+			<code>gitr revert js/app.js 43fba2...</code>
+		</section>
+		<section>
+			<p>revert entire branch to commit-specific version</p>
+			<code>gitr revert 43fba2...</code>
+		</section>
+		<section>
+			<p>push commits to remote</p>
+			<code>gitr push</code>
+		</section>
+		<section>
+			<p>pull commits from remote</p>
+			<code>gitr pull</code>
+		</section>
+		<section>
+			<p>list all commits (hit q to exit!)</p>
+			<code>gitr commits</code>
+		</section>
+		<section>
+			<p>list all branches</p>
+			<code>gitr branches</code>
+		</section>
+		<section>
+			<p>see git status</p>
+			<code>gitr status</code>
+		</section>
+		<section>
+			<p>update remotes</p>
+			<code>gitr update</code>
+		</section>
+		<section>
+			<p>set git user name and email</p>
+			<code>gitr user "James Rock" "hello@jamesrock.me"</code>
+		</section>
+	</body>
+</html>

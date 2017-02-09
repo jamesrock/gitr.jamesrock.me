@@ -1,0 +1,36 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+	line-height: 1.3;
+	color: #333;
+	font-size: 18px;
+	text-align: center;
+	padding: 50px;
+}
+
+code {
+	display: block;
+	content: "$ ";
+	white-space: nowrap;
+	overflow-x: scroll;
+}
+
+code:before {	
+	content: "$ ";
+}
+
+section {
+	padding: 20px;
+}
+
+@media (max-width: 500px) {
+
+	body {
+		padding: 30px 10px;
+	}
+
+}
