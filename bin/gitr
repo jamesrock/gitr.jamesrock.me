@@ -5,27 +5,30 @@ case $1 in
 
 		from=$2;
 		name=$3;
-		commit=$4;
 
-		git checkout $from;git checkout -b $name;git push -u origin $name;
+		git checkout $from;git pull;git checkout -b $name;git push -u origin $name;
 
-	;;
-	"branches")
-		
-		git branch -a;
-		
 	;;
 	"unbranch")
 
 		git branch -D $2;git push origin :$2;
 
 	;;
+	"branches")
+
+		# gitr branches
+
+		git branch -a;
+
+	;;
 	"merge")
+
+		# gitr merge dev master
 
 		name=$2;
 		into=$3;
 
-		git checkout $into;git merge origin/$name;
+		git checkout $into;git pull;git merge origin/$name;
 
 	;;
 	"discard")
@@ -56,31 +59,31 @@ case $1 in
 	;;
 	"commit")
 
-		git add -A .;git commit -m "$2";
+		git add -A;git commit -m "$2";
 
 	;;
 	"commits")
-		
+
 		git log;
 
 	;;
 	"update")
-		
+
 		git remote update --prune origin;
 
 	;;
 	"status")
-		
+
 		git status;
 
 	;;
 	"push")
-		
+
 		git push;
 
 	;;
 	"pull")
-		
+
 		git pull;
 
 	;;
@@ -95,8 +98,8 @@ case $1 in
 
 	;;
 	"help")
-		
-		echo "help is on its way!";
+
+		echo "sorry?";
 
 	;;
 esac
