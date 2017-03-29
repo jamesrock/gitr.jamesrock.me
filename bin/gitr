@@ -99,6 +99,11 @@ case $1 in
 	;;
 	"help")
 
+		echo "see gitr.jamesrock.me";
+
+	;;
+	*)
+
 		echo "sorry?";
 
 	;;
