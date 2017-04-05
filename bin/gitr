@@ -27,13 +27,12 @@ case $1 in
 	;;
 	"discard")
 
-		# gitr discard js/app.js
-		# gitr discard
-
 		if [ "$2" ]
 			then
+				# gitr discard js/app.js
 				git checkout -- $2;
 			else
+				# gitr discard
 				git checkout -- .;
 		fi
 
