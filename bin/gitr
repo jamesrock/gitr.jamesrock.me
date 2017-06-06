@@ -3,13 +3,13 @@
 case $1 in
 	"branch")
 
-		# gitr branch master dev
-		gitr checkout $2;git checkout -b $3;git push -u origin $3;
+		# gitr branch develop
+		git checkout -b $2;git push -u origin $2;
 
 	;;
 	"unbranch")
 
-		# gitr unbranch dev
+		# gitr unbranch develop
 		git branch -D $2;git push origin :$2;
 
 	;;
@@ -21,8 +21,8 @@ case $1 in
 	;;
 	"merge")
 
-		# gitr merge dev master
-		gitr checkout $3;git merge origin/$2;
+		# gitr merge develop
+		git merge origin/$2;
 
 	;;
 	"discard")
@@ -57,36 +57,43 @@ case $1 in
 	;;
 	"commits")
 
+		# gitr commits
 		git log;
 
 	;;
 	"update")
 
+		# gitr update
 		git remote update --prune origin;
 
 	;;
 	"status")
 
+		# gitr status
 		git status;
 
 	;;
 	"push")
 
+		# gitr push
 		git push;
 
 	;;
 	"pull")
 
+		# gitr pull
 		git pull;
 
 	;;
 	"checkout")
 
+		# gitr checkout
 		git checkout $2;git pull;
 
 	;;
 	"help")
 
+		# gitr help
 		echo "see gitr.jamesrock.me";
 
 	;;
