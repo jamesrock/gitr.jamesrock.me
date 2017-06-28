@@ -22,7 +22,7 @@ case $1 in
 	"merge")
 
 		# gitr merge develop
-		git merge origin/$2;
+		git merge $2;
 
 	;;
 	"discard")

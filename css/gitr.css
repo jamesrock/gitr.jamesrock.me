@@ -14,12 +14,11 @@ body {
 
 code {
 	display: block;
-	content: "$ ";
 	white-space: nowrap;
 	overflow-x: scroll;
 }
 
-code:before {	
+code:before {
 	content: "$ ";
 }
 
