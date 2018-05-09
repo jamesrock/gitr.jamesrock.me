@@ -64,7 +64,7 @@ case $1 in
 	"remove")
 
 		# gitr remove js/app.js
-		git rm $2;
+		git rm $2 -f;
 
 	;;
 	"commit")
