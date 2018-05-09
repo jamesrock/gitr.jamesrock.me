@@ -1,6 +1,6 @@
 # gitr.jamesrock.me
 
-terminal git simplified
+terminal git made easier
 
 ## install script
 
