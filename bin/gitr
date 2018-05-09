@@ -49,10 +49,28 @@ case $1 in
 		fi
 
 	;;
+	"add")
+
+		if [ "$2" ]
+			then
+				# gitr add js/app.js
+				git add $2;
+			else
+				# gitr add
+				git add -A;
+		fi
+
+	;;
+	"remove")
+
+		# gitr remove js/app.js
+		git rm $2;
+
+	;;
 	"commit")
 
 		# gitr commit "message"
-		git add -A;git commit -m "$2";
+		gitr add;git commit -m "$2";
 
 	;;
 	"commits")
