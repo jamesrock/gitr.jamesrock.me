@@ -1,7 +1,5 @@
 (function() {
 
-	console.log('gitr');
-
 	var
 	commands = [
 		{
