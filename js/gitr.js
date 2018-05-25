@@ -87,7 +87,7 @@
 	],
 	examplesNode = document.getElementById('examples'),
 	template = '<section> \
-		<p>{desc}</p> \
+		<h3>{desc}</h3> \
 		<code>{code}</code> \
 	</section>',
 	out = '';
