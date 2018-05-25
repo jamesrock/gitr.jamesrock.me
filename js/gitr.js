@@ -1,5 +1,7 @@
 (function() {
 
+	console.log('gitr');
+
 	var
 	commands = [
 		{
@@ -15,8 +17,8 @@
 			code: 'gitr unbranch example'
 		},
 		{
-			desc: 'checkout master branch',
-			code: 'gitr checkout master'
+			desc: 'checkout example branch',
+			code: 'gitr checkout example'
 		},
 		{
 			desc: 'merge example branch into current branch',
@@ -43,11 +45,11 @@
 			code: 'gitr revert 43fba2...'
 		},
 		{
-			desc: 'push commits to remote branch',
+			desc: 'push commits to remote',
 			code: 'gitr push'
 		},
 		{
-			desc: 'pull commits from remote branch',
+			desc: 'pull commits from remote',
 			code: 'gitr pull'
 		},
 		{
@@ -66,6 +68,36 @@
 			desc: 'update remotes',
 			code: 'gitr update'
 		},
-	];
+		{
+			desc: 'add file',
+			code: 'gitr add js/app.js'
+		},
+		{
+			desc: 'add all files',
+			code: 'gitr add'
+		},
+		{
+			desc: 'remove file',
+			code: 'gitr remove js/app.js'
+		},
+		{
+			desc: 'remove all files',
+			code: 'gitr remove'
+		}
+	],
+	examplesNode = document.getElementById('examples'),
+	template = '<section> \
+		<p>{desc}</p> \
+		<code>{code}</code> \
+	</section>',
+	out = '';
+
+	commands.forEach(function(command) {
+
+		out += ROCK.STRING.replacer(template, command);
+
+	});
+
+	examplesNode.innerHTML = out;
 
 })();

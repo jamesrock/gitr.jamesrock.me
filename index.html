@@ -8,69 +8,8 @@
 	</head>
 	<body>
 		<h1>terminal git made easier</h1>
-		<section>
-			<p>install on macOS</p>
-			<code>curl -O http://gitr.jamesrock.me/bin/gitr;chmod 755 gitr;sudo mv gitr /usr/local/bin</code>
-		</section>
-		<section>
-			<p>create new example branch from current branch</p>
-			<code>gitr branch example</code>
-		</section>
-		<section>
-			<p>delete example branch</p>
-			<code>gitr unbranch example</code>
-		</section>
-		<section>
-			<p>checkout master branch</p>
-			<code>gitr checkout master</code>
-		</section>
-		<section>
-			<p>merge example branch into current branch</p>
-			<code>gitr merge example</code>
-		</section>
-		<section>
-			<p>commit all changes to current branch</p>
-			<code>gitr commit "some work"</code>
-		</section>
-		<section>
-			<p>discard changes to file since last commit</p>
-			<code>gitr discard js/app.js</code>
-		</section>
-		<section>
-			<p>discard all changes since last commit</p>
-			<code>gitr discard</code>
-		</section>
-		<section>
-			<p>revert file to commit-specific version</p>
-			<code>gitr revert js/app.js 43fba2...</code>
-		</section>
-		<section>
-			<p>revert entire branch to commit-specific version</p>
-			<code>gitr revert 43fba2...</code>
-		</section>
-		<section>
-			<p>push commits to remote branch</p>
-			<code>gitr push</code>
-		</section>
-		<section>
-			<p>pull commits from remote branch</p>
-			<code>gitr pull</code>
-		</section>
-		<section>
-			<p>list all commits (hit q to exit!)</p>
-			<code>gitr commits</code>
-		</section>
-		<section>
-			<p>list all branches</p>
-			<code>gitr branches</code>
-		</section>
-		<section>
-			<p>see git status</p>
-			<code>gitr status</code>
-		</section>
-		<section>
-			<p>update remotes</p>
-			<code>gitr update</code>
-		</section>
+		<div id="examples"></div>
+		<script src="http://js.jamesrock.me/ROCK-8.0.js"></script>
+		<script src="/js/gitr.js"></script>
 	</body>
 </html>
